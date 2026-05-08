@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SORAE</title>
+<link rel="icon" href="LOGO0.png">
+<style>
+  body{
+font-family: Arial;
+margin:0;
+background:rgb(235, 235, 235);
+color: rgb(66, 66, 66);
+}
+
+/* //////////////////////////////header///////////////////////// */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+border-bottom:1px solid #eee;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color: #636363;
+}
+
+/* LOGO */
+
+.logo-box{
+display:flex;
+align-items:center;
+text-decoration:none;
+}
+
+.logo-img{
+width:40px;
+margin-right:10px;
+}
+
+.logo-text{
+font-size:22px;
+font-weight:bold;
+color:#111;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#868686;
+font-weight:500;
+}
+
+nav a:hover{
+color:#00a2ff;
+}
+
+
+/* //////////////////////////////HERO//////////////////////////////////// */
+
+.hero{
+height:400px;
+display:flex;
+align-items:center;
+padding:100 60px;
+background-repeat: no-repeat;
+background-size: 1500px;
+background-position: right;
+background-image: linear-gradient(
+to right,
+rgba(0,0,0,0.6),
+rgba(0,0,0,0.2),
+rgba(0,0,0,0)
+),
+url(img/36.png);
+
+background-size:cover;
+background-position:right;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero h1{
+font-size:60px;
+color:white;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#ddd;
+font-size:18px;
+}
+
+
+
+/* //////////////Sections ///////////////// */
+
+section{
+padding:40px;
+}
+
+h2{
+margin-bottom:20px;
+}
+
+/* 
+/////////////////////////Manga Grid//////////////////// */
+
+/* Container for the 2x2 Layout */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Exactly 2 columns */
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Individual Video Cards */
+.video-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-card video {
+    width: 100%;
+    display: block;
+    background: #000;
+    height: 0 auto;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+/* Featured Section (YouTube) */
+.featured-section {
+    background: #f0f8ff; /* Light blue tint to stand out */
+    padding: 60px 20px;
+    margin-top: 40px;
+}
+
+.featured-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-top: 30px;
+}
+
+.youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive: 1 column on Mobile */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 35px;
+    }
+}
+
+
+/* ///////////////////////////////Youtube Video////////////////////////// */
+
+.video-section{
+padding:3px 50px;
+text-align:center;
+}
+
+/* Center container */
+.video-container{
+display:flex;
+justify-content:center;
+}
+
+/* Video box */
+.video-box{
+width:100%;
+max-width:400px;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
+
+}
+
+/* Responsive iframe */
+.video-box iframe{
+width:100%;
+height:450px;
+border:none;
+
+}
+
+.content-section{
+text-align: center;
+font-size: 1rem;
+}
+
+
+.video-box{
+position:relative;
+width:100%;
+max-width:100%;
+padding-top:56.25%; /* 16:9 ratio */
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(160, 46, 46, 0.15);
+}
+
+.video-box iframe{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+
+@media (max-width:768px){
+.video-box iframe{
+height:220px;
+}
+}
+
+.speak h2{
+    grid-column: 1 / span 2; 
+    text-align: center;      
+    width: 100%;
+    margin: 20px 0;          
+}
+
+/* ///////////////////////////FOOTER/////////////////////////////////// */
+
+
+footer {
+  background: #ffffff;
+  padding: 30px 10px;
+  margin-top: 10px;
+  border-top: 1px solid #f0f0f0;
+  text-align: center; /* This centers all text instantly */
+  border-top: 1px solid #f0f0f0; 
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the boxes themselves */
+  gap: 40px;
+}
+
+.footer-section h3 {
+  color: #5a5858;
+  font-size: 40px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-section p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.link-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Puts links side-by-side but centered */
+  flex-wrap: wrap;
+}
+
+.footer-section a {
+  color: #4b4b4b;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #ff4757; /* A little pop of color for the hover */
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #f9f9f9;
+  width: 100%;
+}
+
+.footer-bottom p {
+  color: #bbb;
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo-box">
+<img src="LOGO0.png" class="logo-img">
+<span class="logo-text">SORAE</span>
+</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="Commissions.html">Art Commissions</a>
+<a href="Speedpaint.html">Speed paint video</a>
+<a href="myart.html">My art</a>
+<a href="about.html">About</a>
+</nav>
+
+</header>
+
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>My Speed Paint Videos</h1>
+      <p>A look into my creative process, from sketch to final render.</p>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2 class="section-title">Thumbnails</h2>
+    <div class="video-grid">
+      
+      <div class="video-card">
+        <video controls autoplay loop muted>
+          <source src="Video2.mp4" type="video/mp4">
+        </video>
+        <div class="card-info">
+          <h3>1 hour drawing</h3>
+          <p></p>
+        </div>
+      </div>
+
+       <div class="video-card">
+        <video controls autoplay loop muted>
+          <source src="Vidoe1.mp4" type="video/mp4">
+        </video>
+        <div class="card-info">
+          <h3>1 and half hour</h3>
+          <p></p>
+        </div>
+      </div>
+      </section>
+
+
+      
+  <section class="video-section">
+    <h2 class="section-title">My manga Speed Paint </h2>
+    <div class="video-grid">
+      
+      <div class="video-card">
+        <video controls autoplay loop muted>
+          <source src="Untitled665.mp4" type="video/mp4">
+        </video>
+        <div class="card-info">
+          <h3>4 hours drawing</h3>
+          <p></p>
+        </div>
+      </div>
+
+       <div class="video-card">
+        <video controls autoplay loop muted>
+          <source src="22.mp4" type="video/mp4">
+        </video>
+        <div class="card-info">
+          <h3>6 hours drawing</h3>
+          <p></p>
+        </div>
+      </div>
+      </section>
+</div>
+
+</section>
+
+
+
+  <section class="video-section">
+    <h2 class="section-title">Full color cover art</h2>
+    <div class="video-grid">
+      
+      <div class="video-card">
+        <video controls autoplay loop muted>
+          <source src="2.mp4" type="video/mp4">
+        </video>
+        <div class="card-info">
+          <h3>7 hours drawing</h3>
+          <p></p>
+        </div>
+      </div>
+
+       <div class="video-card">
+        <video controls autoplay loop muted>
+          <source src="4.mp4" type="video/mp4">
+        </video>
+        <div class="card-info">
+          <h3>6 hours drawing</h3>
+          <p></p>
+        </div>
+      </div>
+      </section>
+
+
+
+
+<footer>
+  <div class="footer-content">
+    
+    <div class="footer-section">
+      <h3>SORAE</h3>
+      <p>
+        SORAE is a modern manga platform where <br>
+        I share my creations, comics, art, and more.
+      </p>
+    </div>
+
+  
+      <div class="footer-section">
+      <h3>Quick Links</h3>
+      <div class="link-group">
+        <a href="index.html">Home</a>
+        <a href="Commissions.html">Art Commissions</a>
+        <a href="Speedpaint.html">Speed paint video</a>
+        <a href="myart.html">My art</a>
+        <a href="about.html">About</a>
+
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Support Artists</h3>
+      <div class="link-group">
+        <a href="#">Donate</a>
+        <a href="#">Ask about Commissions</a>
+        <a href="#">Ideas</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>09-448834175</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 SORAE. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
